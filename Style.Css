@@ -1,0 +1,13 @@
+body{
+    background-color: grey; 
+color: black;
+
+}
+#frist-div{
+   background: azure;
+}
+
+.paragraph{
+    color: black;
+    font-size: 2rem;
+}
