@@ -1,15 +1,10 @@
-<?php /* Oppgave 1 */
+<?php /* Oppgave 2 */
 /*
-/* Programmet mottar fra et HTML-skjema et svar på spørsmålet "Hva er 3 ganger 3 ?"
-/* Programmet sjekker om svaret er riktig og skriver ut en melding avhengig av om svaret er riktig eller feil
+/* Programmet mottar fra et HTML-skjema et navn og en alder ved POST-metoden
+/* Programmet skriver ut en "god dag"-melding med personens navn og alder
 */
-$svar=$_POST ["svar"];
-if ($svar == 9) /* avgitt svar er riktig */
-{
-print("Riktig. 3 ganger 3 er 9 <br/>");
-}
-else /* avgitt svar er feil */
-{
-print("Feil. 3 ganger 3 er ikke $svar. 3 ganger 3 er 9 <br/>");
-}
+$fornavn=$_POST ["fornavn"];
+$etternavn=$_POST ["etternavn"];
+$alder=$_POST ["alder"]; /* variable gitt verdier fra feltene i HTML-skjemaet */
+print ("God dag $fornavn $etternavn, du er $alder &aring;r og like sprek. <br />"); /* resultat skrevet ut */
 ?>
