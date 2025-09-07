@@ -1,4 +1,4 @@
-<?php /* Oppgave2 */
+<?php /* Oppgave-2 */
 /*
 /* Programmet mottar fra et HTML-skjema et navn og en alder ved POST-metoden
 /* Programmet skriver ut en "god dag"-melding med personens navn og alder
