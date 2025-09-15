@@ -15,14 +15,17 @@
   </form>
 
   <?php
+  // Sjekk om skjemaet er sendt inn
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      // Hent og trim brukersvaret
       $svar = trim($_POST["svar"]);
       $svarTall = (int)$svar;
 
+      // Sjekk om svaret er riktig
       if ($svarTall === 9) {
-          echo "Riktig. 3 ganger 3 er 9 <br/>";
+          echo "<p style='color: green;'>Riktig. 3 ganger 3 er 9.</p>";
       } else {
-          echo "Feil. 3 ganger 3 er ikke $svar. 3 ganger 3 er 9 <br/>";
+          echo "<p style='color: red;'>Feil. 3 ganger 3 er ikke $svar. 3 ganger 3 er 9.</p>";
       }
   }
   ?>
