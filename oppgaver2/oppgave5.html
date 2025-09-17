@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Regneoperasjon</title>
+</head>
+<body>
+
+<h2>Velg regneoperasjon</h2>
+<form action="oppgaver2/oppgave5.php" method="post">
+    <label>Tall 1:
+        <input type="number" name="tall1" required>
+    </label><br><br>
+
+    <label>Tall 2:
+        <input type="number" name="tall2" required>
+    </label><br><br>
+
+    <label>Regneoperasjon (1=+, 2=-, 3=*, 4=/):
+        <input type="number" name="operasjon" min="1" max="4" required>
+    </label><br><br>
+
+    <input type="submit" value="Beregn">
+</form>
+
+</body>
+</html>
