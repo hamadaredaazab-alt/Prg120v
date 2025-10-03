@@ -1,34 +1,40 @@
-<?php /* slett-student */
+<?php  /* slett-student */
 /*
-/* Programmet lager et skjema for å slette en student
-/* Studenten slettes basert på valgt brukernavn
+/*  Programmet lager et skjema for å velge en student som skal slettes  
+/*  Studenten slettes basert på valgt brukernavn
 */
-?>
+?> 
+
+<script src="funksjoner.js"></script>
+
 <h3>Slett student</h3>
 
-<form method="post" action="" id="slettStudentSkjema" name="slettStudentSkjema">
-Brukernavn på student som skal slettes:
-<input type="text" id="brukernavn" name="brukernavn" required /> <br/>
-<input type="submit" value="Slett student" id="slettStudentKnapp" name="slettStudentKnapp" />
-<input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
+<form method="post" action="" id="slettStudentSkjema" name="slettStudentSkjema" onSubmit="return bekreft()">
+  Brukernavn  
+  <select name="brukernavn" id="brukernavn">
+    <option value="">velg brukernavn</option>
+    <?php include("dynamiske-funksjoner.php"); "listeboksStudent"(); ?> 
+  </select>  <br/>
+  <input type="submit" value="Slett student" name="slettStudentKnapp" id="slettStudentKnapp" /> 
 </form>
 
 <?php
 if (isset($_POST["slettStudentKnapp"])) {
-    $brukernavn = $_POST["brukernavn"];
+    $brukernavn = $_POST["brukernavn"];    
 
     if (!$brukernavn) {
-        print("Brukernavn må fylles ut");
-    } else {
-        include("db-tilkobling.php");
+        print("Det er ikke valgt noen student."); 
+    } else {        
+        include("db-tilkobling.php");  /* tilkobling til database-serveren utført og valg av database foretatt */
 
         $sqlSetning = "DELETE FROM student WHERE brukernavn='$brukernavn';";
-        mysqli_query($db, $sqlSetning) or die("Ikke mulig å slette data fra databasen");
-
+        mysqli_query($db, $sqlSetning) or die("ikke mulig å slette data i databasen");
+        /* SQL-setning sendt til database-serveren */
+    
         if (mysqli_affected_rows($db) > 0) {
-            print("Student med brukernavn $brukernavn er slettet");
+            print("Følgende student er nå slettet: $brukernavn <br />");
         } else {
-            print("Ingen student med brukernavn $brukernavn ble funnet");
+            print("Ingen student med brukernavn $brukernavn ble funnet.");
         }
     }
 }
