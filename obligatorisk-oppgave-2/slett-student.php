@@ -3,6 +3,8 @@
 /* Programmet lager et skjema for å slette en student
 /* Studenten slettes basert på studentnummer skrevet manuelt
 */
+
+ include("dynamiske-funksjoner.php"); // henter funksjonen
 ?>
 
 <h3>Slett student</h3>

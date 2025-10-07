@@ -2,7 +2,7 @@
 /*
 /*  denne filen inneholder følgende dynamiske funksjoner:
 /*    listeboksklassekode()
-/*    sjekkbokserklassenavn()
+/*    sjekkbokserbruknavn()
 */
 
 
@@ -30,7 +30,7 @@ function sjekkbokserbruknavn()
 {
   include("db-tilkobling.php");  /* tilkobling til database-server og valg av database utført */
       
-  $sqlSetning="SELECT * FROM registrer-student ORDER BY fornavn;";
+  $sqlSetning="SELECT * FROM registrerstudent ORDER BY fornavn;";
   $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen");  
     /* SQL-setning sendt til database-serveren */
       
@@ -39,10 +39,11 @@ function sjekkbokserbruknavn()
   for ($r=1;$r<=$antallRader;$r++)
     {
       $rad=mysqli_fetch_array($sqlResultat);  /* ny rad hentet fra spørringsresultatet */
-      $postnr=$rad["brukernavn"];       
-      $poststed=$rad["fornavn"];    
-
-      print("<input type='checkbox' id='brukernavn' name='brukernavn[]' value='brukernavn' /> $brukernavn $fornavn <br/>");  
+       $brukernavn = htmlspecialchars($rad["brukernavn"]);
+        $fornavn = htmlspecialchars($rad["fornavn"]);
+        $etternavn = htmlspecialchars($rad["etternavn"]);
+      print("<input type='checkbox' id='brukernavn' name='brukernavn[]' value='$brukernavn' id='bruker_$brukernavn' />
+              $fornavn $etternavn ($brukernavn) <br/>");  
         /* ny sjekkboks laget */
     }
 }
