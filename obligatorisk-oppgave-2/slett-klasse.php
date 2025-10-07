@@ -3,7 +3,7 @@
 /* Programmet lager et skjema for å slette en klasse
 /* Klassen slettes basert på valgt klassekode
 */
-include("dynamiske-funksjoner.php"); // henter funksjonen
+    include("dynamiske.php"); // henter funksjonen
 ?>
 <h3>Slett klasse</h3>
 
