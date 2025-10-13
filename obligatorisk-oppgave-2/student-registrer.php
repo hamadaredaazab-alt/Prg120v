@@ -10,7 +10,7 @@
 Brukernavn <input type="text" id="brukernavn" name="brukernavn" required /> <br/>
 Fornavn <input type="text" id="fornavn" name="fornavn" required /> <br/>
 Etternavn <input type="text" id="etternavn" name="etternavn" required /> <br/>
-student<select name="student" id="student">
+student<select name="klassekode" id="klassekode">
 <?php print("<option value=''>velg student </option>");
 include("dynamiske-funksjoner.php"); sjekkbokserbruknavne(); ?>
 </select> <br/>

@@ -42,6 +42,7 @@ function sjekkbokserbruknavne()
       $rad=mysqli_fetch_array($sqlResultat);  /* ny rad hentet fra spørringsresultatet */
        $brukernavn = htmlspecialchars($rad["brukernavn"]);
         $fornavn = htmlspecialchars($rad["fornavn"]);
+        $klassekode = htmlspecialchars($rad["klassekode"]);
 
       print("<option value='$brukernavn'>$brukernavn $fornavn</option>");  /* ny verdi i sjekkbokserbruknavne laget */
     }
