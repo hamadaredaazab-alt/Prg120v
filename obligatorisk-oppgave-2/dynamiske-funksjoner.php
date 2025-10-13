@@ -10,7 +10,7 @@ function listeboksklassekode()
 {
   include("db-tilkobling.php");  /* tilkobling til database-server og valg av database utført */
       
-  $sqlSetning="SELECT * FROM registrerklasse ORDER BY klassekode;";
+  $sqlSetning="SELECT * FROM klasse ORDER BY klassekode;";
   $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen"); 
     /* SQL-setning sendt til database-serveren */
 	
@@ -30,7 +30,7 @@ function sjekkbokserbruknavn()
 {
   include("db-tilkobling.php");  /* tilkobling til database-server og valg av database utført */
       
-  $sqlSetning="SELECT * FROM registrerstudent ORDER BY fornavn;";
+  $sqlSetning="SELECT * FROM student ORDER BY fornavn;";
   $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen");  
     /* SQL-setning sendt til database-serveren */
       
