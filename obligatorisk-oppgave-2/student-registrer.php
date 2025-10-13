@@ -9,8 +9,9 @@
 <form method="post" action="" id="registrerStudentSkjema" name="registrerStudentSkjema">
 Brukernavn <input type="text" id="brukernavn" name="brukernavn" required /> <br/>
 Fornavn <input type="text" id="fornavn" name="fornavn" required /> <br/>
+Etternavn <input type="text" id="etternavn" name="etternavn" required /> <br/>
 klassekode<select name="klassekode" id="klassekode">
-<?php print("<option value=''>velg etternavn </option>");
+<?php print("<option value=''>velg klasse </option>");
 include("dynamiske-funksjoner.php"); sjekkbokserbruknavne(); ?>
 </select> <br/>
 <input type="submit" value="Registrer student" id="registrerStudentKnapp" name="registrerStudentKnapp" />
