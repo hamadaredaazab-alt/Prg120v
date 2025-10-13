@@ -10,6 +10,7 @@
 Brukernavn <input type="text" id="brukernavn" name="brukernavn" required /> <br/>
 Fornavn <input type="text" id="fornavn" name="fornavn" required /> <br/>
 Etternavn <input type="text" id="etternavn" name="etternavn" required /> <br/>
+klassekode <input type="text" id="klassekode" name="klassekode" required /> <br/>
 
 klasse<select name="klassekode" id="klassekode">
 
