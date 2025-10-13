@@ -1,19 +1,14 @@
-<?php  /* slett-student.php */
-/*
-/* Programmet lager et skjema for å slette en student
-/* Studenten slettes basert på studentnummer skrevet manuelt
-*/
-
- include("dynamiske-funksjoner.php"); // henter funksjonen
-?>
 <script src="funksjon.js"> </script>
 <h3>Slett student</h3>
 
-<form method="post" action="slett-student.php" id="slettStudentSkjema" name="slettStudentSkjema">
-    Brukernavn: 
-    <input type="text" id="Brukernavn" name="Brukernavn" required /> <br/><br/>
-    <input type="submit" value="Slett student" name="slettStudentKnapp" /> 
-    <input type="reset" value="Nullstill" /> 
+<form method="post" action="" id="slettstudentSkjema" name="slettstudentSkjema" onSubmit="return bekreft()">
+Brukernavn på student som skal slettes:
+<select name="bruknavn" id="fornavn">
+   <option value=""> valg brukernavn </option> 
+   
+<?php include("dynamiske-funksjoner.php"); listeboksklassekode(); ?>
+</select>
+<input type="submit" value="Slett klasse" id="slettstudentKnapp" name="slettstudentKnapp" />
 </form>
 
 <?php
