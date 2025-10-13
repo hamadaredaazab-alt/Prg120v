@@ -6,7 +6,7 @@ Brukernavn på student som skal slettes:
 <select name="bruknavn" id="fornavn">
    <option value=""> valg brukernavn </option> 
    
-<?php include("dynamiske-funksjoner.php"); sjekkbokserbruknavn(); ?>
+<?php include("dynamiske-funksjoner.php"); sjekkbokserbruknavne(); ?>
 </select>
 <input type="submit" value="Slett student" id="slettstudentKnapp" name="slettstudentKnapp" />
 </form>
