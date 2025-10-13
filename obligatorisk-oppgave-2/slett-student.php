@@ -3,8 +3,8 @@
 
 <form method="post" action="" id="slettstudentSkjema" name="slettstudentSkjema" onSubmit="return bekreft()">
 Brukernavn på student som skal slettes:
-<select name="bruknavn" id="fornavn">
-   <option value=""> valg brukernavn </option> 
+<select name="Brukernavn" id="Brukernavn">
+   <option value=""> valg Brukernavn </option> 
    
 <?php include("dynamiske-funksjoner.php"); sjekkbokserbruknavne(); ?>
 </select>
