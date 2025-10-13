@@ -1,8 +1,3 @@
-
-<?php /* slett-klasse */
-
-    include("dynamiske-funksjoner.php"); 
-?>
 <script src="funksjon.js"> </script>
 <h3>Slett klasse</h3>
 
