@@ -16,7 +16,7 @@ klasse<select name="klassekode" id="klassekode">
 
 <?php print("<option value=''>velg klasse </option>");
 include("dynamiske-funksjoner.php"); 
-sjekkbokserbruknavne(); ?>
+listeboksklassekode(); ?>
 </select> <br/>
 
 <input type="submit" value="Registrer student" id="registrerStudentKnapp" name="registrerStudentKnapp" />
