@@ -45,9 +45,5 @@ function sjekkbokserbruknavne()
 
       print("<option value='$brukernavn'>$brukernavn $fornavn</option>");  /* ny verdi i sjekkbokserbruknavne laget */
     }
-    }
-}
-
-
-
+ }
 ?>
