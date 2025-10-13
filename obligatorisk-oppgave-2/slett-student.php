@@ -6,7 +6,7 @@
 
  include("dynamiske-funksjoner.php"); // henter funksjonen
 ?>
-
+<script src="funksjon.js"> </script>
 <h3>Slett student</h3>
 
 <form method="post" action="slett-student.php" id="slettStudentSkjema" name="slettStudentSkjema">
