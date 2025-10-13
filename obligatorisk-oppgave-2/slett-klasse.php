@@ -13,9 +13,7 @@ Klassekode på klassen som skal slettes:
    <option value=""> valg klassekode </option> 
 <?php include("dynamiske-funksjoner.php"); listeboksklassekode(); ?>
 </select>
-<input type="text" id="klassekode" name="klassekode" required /> <br/>
 <input type="submit" value="Slett klasse" id="slettKlasseKnapp" name="slettKlasseKnapp" />
-<input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
 </form>
 
 <?php
