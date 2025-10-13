@@ -8,7 +8,7 @@ Brukernavn på student som skal slettes:
    
 <?php include("dynamiske-funksjoner.php"); sjekkbokserbruknavne(); ?>
 </select>
-<input type="submit" value="Slett student" id="slettstudentKnapp" name="slettstudentKnapp" />
+<input type="submit" value="Slett student" id="slettStudentKnapp" name="slettStudentKnapp" />
 </form>
 
 <?php
