@@ -6,9 +6,9 @@ Brukernavn på student som skal slettes:
 <select name="bruknavn" id="fornavn">
    <option value=""> valg brukernavn </option> 
    
-<?php include("dynamiske-funksjoner.php"); listeboksklassekode(); ?>
+<?php include("dynamiske-funksjoner.php"); sjekkbokserbruknavn(); ?>
 </select>
-<input type="submit" value="Slett klasse" id="slettstudentKnapp" name="slettstudentKnapp" />
+<input type="submit" value="Slett student" id="slettstudentKnapp" name="slettstudentKnapp" />
 </form>
 
 <?php
