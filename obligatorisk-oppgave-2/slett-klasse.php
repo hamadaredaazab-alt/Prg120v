@@ -1,14 +1,18 @@
+
+<script src="funksjon.js"> </script>
+
 <?php /* slett-klasse */
-/*
-/* Programmet lager et skjema for å slette en klasse
-/* Klassen slettes basert på valgt klassekode
-*/
-    include("dynamiske-funksjoner.php"); // henter funksjonen
+
+    include("dynamiske-funksjoner.php"); 
 ?>
 <h3>Slett klasse</h3>
 
 <form method="post" action="" id="slettKlasseSkjema" name="slettKlasseSkjema">
 Klassekode på klassen som skal slettes:
+<select name="klassekode" id="klassekode">
+   <option value=""> valg klassekode </option> 
+<?php include("dynamiske-funksjoner.php"); listeboksklassekode(); ?>
+</select>
 <input type="text" id="klassekode" name="klassekode" required /> <br/>
 <input type="submit" value="Slett klasse" id="slettKlasseKnapp" name="slettKlasseKnapp" />
 <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
